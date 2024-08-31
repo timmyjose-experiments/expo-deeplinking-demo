@@ -4,19 +4,18 @@ import { View, Text, StyleSheet, Pressable } from 'react-native'
 import { RootStackParamList } from '../App'
 
 export interface SubParams {
-  x: number
-  y: number
+  diff: number
 }
 
 const Sub = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
 
   const route = useRoute<RouteProp<RootStackParamList, 'Sub'>>()
-  const { x, y } = route.params || {}
+  const { diff } = route.params || {}
 
   return (
     <View style={styles.container}>
-      <Text>Difference: {x - y} </Text>
+      <Text>Difference: {diff} </Text>
       <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
         <Text> Go Home</Text>
       </Pressable>

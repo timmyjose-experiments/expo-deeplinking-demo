@@ -4,19 +4,18 @@ import { View, Text, StyleSheet, Pressable } from 'react-native'
 import { RootStackParamList } from '../App'
 
 export interface DivParams {
-  x: number
-  y: number
+  quot: number
 }
 
 const Div = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
 
   const route = useRoute<RouteProp<RootStackParamList, 'Div'>>()
-  const { x, y } = route.params || {}
+  const { quot } = route.params || {}
 
   return (
     <View style={styles.container}>
-      <Text>Quotient: {x / y} </Text>
+      <Text>Quotient: {quot} </Text>
       <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
         <Text> Go Home</Text>
       </Pressable>

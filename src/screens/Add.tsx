@@ -4,19 +4,18 @@ import { View, Text, StyleSheet, Pressable } from 'react-native'
 import { RootStackParamList } from '../App'
 
 export interface AddParams {
-  x: number
-  y: number
+  sum: number
 }
 
 const Add = () => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
 
   const route = useRoute<RouteProp<RootStackParamList, 'Add'>>()
-  const { x, y } = route.params || {}
+  const { sum } = route.params || {}
 
   return (
     <View style={styles.container}>
-      <Text>Sum: {x + y} </Text>
+      <Text>Sum: {sum} </Text>
       <Pressable style={styles.button} onPress={() => navigation.navigate('Home')}>
         <Text> Go Home</Text>
       </Pressable>

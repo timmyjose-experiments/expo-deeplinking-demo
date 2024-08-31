@@ -2,6 +2,7 @@
   "expo": {
     "name": "expo-deeplinking-demo",
     "slug": "expo-deeplinking-demo",
+    "scheme": "calc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
